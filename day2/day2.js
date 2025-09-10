@@ -1,41 +1,39 @@
-// let number =5;
-// do{
-//     console.log(number);
-//     number--;
-// }while(number>=1);
-
-// let array=[2,4,6,7,8];
-// for(let num of array){
-//     console.log(num);
-// }
-// let language="javascript";
-// for(let words of language)
-// {
-//     console.log(words);
-// }
+const students = [
+  { name: "Ali", age: 17, marks: 45 },
+  { name: "Sara", age: 20, marks: 75 },
+  { name: "Bilal", age: 19, marks: 30 },
+  { name: "Ayesha", age: 22, marks: 90 }
+];
 
 
-// let array=[100,200,300,400,500];
-// function square(value){
-//     console.log(value*value);
-// }
-// array.forEach(square);
-
-// let array=[1,2,3,4,5,6,7,8];
-// for (let item of array){
-//     let result=(item%2===0)?"Even number": "Odd Number";
-//     console.log(item +"is" +result);
-// }
-
-//counting vowals
-let make_string="ceeehhofojpfjfkvkvirihh3prpena xlmwoh";
- let result=0;
-for(let albt of make_string){
-       
-    if(albt==="a" || albt==="e" || albt === "i" || albt==="o" || albt==="u" ){
-result++;
-    }
 
 
+for(let student of students){
+    console.log(student.name +"marks are"+ student.marks)
 }
-console.log(result);
+
+students.forEach(function(student,index){
+ let result=(student.marks>=50)? "pass" : "fail";
+ console.log(student.name +"is"+ result);
+})
+
+students.forEach(function(stdu){
+    let marks=stdu.marks+5;
+    console.log(marks);
+})
+ let newar=students.map(function(stud){
+    return stud.name.toUpperCase();
+
+ })
+
+ console.log(newar);
+
+//geting 1 obj and applying for in
+ let stdn=students[0];
+ console.log(stdn);
+
+ for(let key in stdn){
+    console.log(key +":" +stdn[key])
+ }
+
+ 
