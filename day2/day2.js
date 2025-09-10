@@ -1,12 +1,14 @@
+let number=document.getElementById("num");
 let checkbtn=document.getElementById("checkbtn");
-let input=document.getElementById("num");
-checkbtn.addEventListener("click",check)
-    function check(){
- if(input.value===""){
-        console.log("Enter Number")
-    }else{
-         let result= (Number(input.value)%2===0)?"Number is even ":"number is odd";
-          console.log(result);
-    }
-  
-    }
+
+
+
+checkbtn.addEventListener("click",check);
+
+
+function check(){
+    let num=Number(number.value);
+    for (let i=1;i<=10;i++){
+    console.log(`${num}*${i}=${num*i}`);
+}
+}
