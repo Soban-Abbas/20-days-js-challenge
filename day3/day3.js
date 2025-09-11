@@ -1,31 +1,28 @@
-//when inner fun still remeber the veribales of outer funcion even outer fun has sttoped its runing
-function fun1(){
-    let name="Soban";
-    return function(){
-        console.log("hello" + name)
-    }
-}
+let arr=[10,"ali",true,[1,2,3]];
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
+console.log(arr[3][0]);
+// from above and below line  we are getting value at 3 indx which is array then going into the array by writing its index 
+console.log(arr[3][1]);
+console.log(arr[3][2]);
+
+//splice
+let array=[1,2,3,4,5,6,7,8,9];
 
 
-let call=fun1();
-call();
+//array.splice(startindex,how many number of item u want to delete from startindex ,add new item at start index and old start index value will move to right side,additem)
 
-//difference b/w returning function and returing by calling fun
-
-function fun2(){
-    let a=10;
-    function fun3(){
-        return a;
-    }
-return fun3();
-   
+array.splice(2,2);//remving from index 2 , 2 item including index 2 and 3
+console.log(array);
+array.splice(2,0,99,100);
+console.log(array);
 
 
-}
-let callfn=fun2();
-console.log(callfn)
-
-// it is importan to usdertsand in above function when we return fun() inside it return value becuase it call fun3 then that fun3 return a which is 10 and now fun3 holding 10 so fun2 returning 10
-
-//but when we only return fun name from parent function its means we are returning whole inner fun whose name we are retrunig so we can use outside of code 
-// first we call parent fun by storing it in varibale becuase it is returning something like fun the we can call that varibale becuase its holding the function.
+//slice
+//slice extract part of array 
+let colours=['black','white','pink','orange','yellow','red'];
+// Extract elements from index 1 to (but not including) index 5
+let extract=colours.slice(1,5);
+console.log(extract);
