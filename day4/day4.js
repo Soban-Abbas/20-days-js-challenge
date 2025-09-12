@@ -1,31 +1,47 @@
-//  destructing
-// way to unpack values from array and objects into varibales
-//array destrcuting 
-let num=[10,20,30,[5,6,7,0]];
-let [a,b,c,d]=num;
-console.log(d);
-let [j,k,,m]=d
-console.log(j,k,m)
-console.log(a,b,c);
+// spread and rest operator
+//same syntax different use depending on context
+//spread (expending)
+
+let arr1=[1,2,3];
+let arr2=[4,5,6];
+let combine=[...arr1,...arr2];
+console.log(combine);
+
+let obj={a:1,b:2}
+let obj2={...obj,c:3}
+console.log(obj2);
+
+
+//rest operator(collect into 1 varibel)
+
+function sum(...nums){
+
+return nums.reduce(function(acc,ntv){
+    return acc+ntv;
+},0);
+
+
+}
+console.log(sum(1,2,3,4,5,6));
 
 
 
-//object destructing
-let obj={
-    name:"soban",
-    age:20,
-    class:"BSSE",
-    subject:{
-        sub1:"DBMS",
-        sub2:"DSA",
-        sub3:"SDA"
-    }
+
+
+
+//destructign with rest
+
+let object={
+    colour1:"black",
+    colour2:"pink",
+    colour3:"white",
+    colour4:"yellow"
 }
 
-// in obj destructing we must put same name of varible as of key of obj then we can rename this
 
-let {name,age,class:className,subject:subjectName}=obj;
+let {colour1:b,colour2:p,...rest}=object;
 
-console.log(subjectName);
-let {sub1,sub2,sub3}=subjectName;
-console.log(sub3);
+console.log(rest);
+
+//  if destructing array rest give as array in return 
+//if destructing object rest give an object in return
