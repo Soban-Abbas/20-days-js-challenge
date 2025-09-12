@@ -1,7 +1,10 @@
-function evenodd(n){
-let result=(n%2===0)?"even":"odd";
-console.log(result);
+function factorial(n){
+     let result=1;
 
-
+     do{
+          result=result*n
+          n--;
+     }while(n>=1);
+     console.log(`${result}`);
 }
-evenodd(52);
+factorial(4);
