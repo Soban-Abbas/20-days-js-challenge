@@ -1,10 +1,12 @@
-function factorial(n){
-     let result=1;
+let array=[1,2,3,4,5,6,7];
+function sum(n){
+let sum=0;
+     for(let item of n){
+          sum=sum+item;
+     }
 
-     do{
-          result=result*n
-          n--;
-     }while(n>=1);
-     console.log(`${result}`);
+console.log(sum);
+
 }
-factorial(4);
+
+sum(array);
