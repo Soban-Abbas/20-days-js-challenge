@@ -1,47 +1,22 @@
-// spread and rest operator
-//same syntax different use depending on context
-//spread (expending)
+//) Optional Chaining (?.)
 
-let arr1=[1,2,3];
-let arr2=[4,5,6];
-let combine=[...arr1,...arr2];
-console.log(combine);
-
-let obj={a:1,b:2}
-let obj2={...obj,c:3}
-console.log(obj2);
-
-
-//rest operator(collect into 1 varibel)
-
-function sum(...nums){
-
-return nums.reduce(function(acc,ntv){
-    return acc+ntv;
-},0);
-
-
-}
-console.log(sum(1,2,3,4,5,6));
+//👉 Safe way to access nested properties.
+//If property doesn’t exist, returns undefined instead of error.
 
 
 
+let user = {
+     profile: { 
+        name: "Ali" 
+    }
+     };
+
+console.log(user.profile?.name); // "Ali"
+console.log(user.address?.city); // undefined (no error)
 
 
+//Nullish Coalescing (??)
 
-//destructign with rest
+//👉 Provides a default value only if variable is null or undefined (not 0 or "").
 
-let object={
-    colour1:"black",
-    colour2:"pink",
-    colour3:"white",
-    colour4:"yellow"
-}
-
-
-let {colour1:b,colour2:p,...rest}=object;
-
-console.log(rest);
-
-//  if destructing array rest give as array in return 
-//if destructing object rest give an object in return
+console.log(user.address?.city??"wah cantt"); // as here address.city not exist then i give undefined so nullish coalescing porvide value because i give value to varibale which contain undefined or null
