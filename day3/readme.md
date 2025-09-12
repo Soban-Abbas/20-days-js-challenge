@@ -11,4 +11,4 @@
 
 
 
-- 7 git log --oneline
+- 7 git log --oneline (it show the all commit made in that repo )
