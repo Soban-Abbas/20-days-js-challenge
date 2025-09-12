@@ -1,12 +1,16 @@
-let array=[1,2,3,4,5,6,7];
-function sum(n){
-let sum=0;
-     for(let item of n){
-          sum=sum+item;
-     }
+let student={
+     name:"Ali",
+     age:18,
+     marks:85
+};
 
-console.log(sum);
 
+function objectPrinter(n){
+
+for(let item in n){
+     console.log(`${item}:${n[item]}`);
 }
 
-sum(array);
+
+}
+objectPrinter(student);
