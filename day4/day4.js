@@ -1,16 +1,11 @@
-let student={
-     name:"Ali",
-     age:18,
-     marks:85
-};
+let array=[2,4,8,16];
 
-
-function objectPrinter(n){
-
-for(let item in n){
-     console.log(`${item}:${n[item]}`);
+function doubleNumber(n){
+     
+     n.forEach(function(a){
+console.log(a*2)
+     })
 }
 
 
-}
-objectPrinter(student);
+doubleNumber(array);
