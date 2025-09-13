@@ -1,17 +1,18 @@
-let list=document.getElementsByClassName("li");//return all eleemnt with thta class i array form
-console.log(list);
+document.getElementById("colors").addEventListener("change", function(e) {
+  console.log("You selected:", e.target.value);
+});
 
+// chnage event is good when we have an option sto choose apply chnage event 
+// when we have an input field when we type and click out of input field then chnage event happen and we can get value but at the same time if we use input event we get live value while typing
+document.getElementById("helo").addEventListener("change",function(e){
+   if (e.target.value === "") { // this will not run becuase chnage evevnt happens only when something chnage in input from previous states 
+    console.log("nothing typed");
+} else {
+    console.log("you typed " + e.target.value);
+}
 
-let l=document.getElementsByTagName('li'); // also return array of all element present in html page in array
-console.log(l);
+})
 
-
-let a=document.querySelector("li");
-let b=document.querySelector(".li");
-console.log(b);
-
-console.log(a);
-let c=document.querySelectorAll(".li");//accessing as class
-let d=document.querySelectorAll("li")// accessing as tagname and also can accessas id and it retrun nodelist array while tag name and class name retrun array of html colections 
-console.log(d);
-console.log(c);
+document.getElementById("helo").addEventListener("input",function(e){
+    console.log("you are typing " + e.target.value)
+})
