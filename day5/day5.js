@@ -1,10 +1,6 @@
-let input = document.getElementById("input");
-input.addEventListener("focus",function(e){
-    console.log("input clicked");
-
-})
-
-input.addEventListener("blur",function(e){
-    console.log("out from input");
-    
+let input=document.getElementById("input");
+input.addEventListener("keydown",function(e){
+if(e.key==="Enter"){
+    console.log("submitted");
+}
 })
