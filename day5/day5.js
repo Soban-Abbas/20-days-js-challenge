@@ -1,11 +1,10 @@
-//mouse event
+let input = document.getElementById("input");
+input.addEventListener("focus",function(e){
+    console.log("input clicked");
 
-let box=document.getElementById("box");
-box.addEventListener("mouseover", function(e){
-    box.style.background="green";
-    console.log("mouse Entered");
 })
-box.addEventListener("mouseleave",function(e){
-    box.style.background="lightblue";
-    console.log("mouse out");
+
+input.addEventListener("blur",function(e){
+    console.log("out from input");
+    
 })
