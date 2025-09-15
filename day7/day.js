@@ -1,13 +1,26 @@
-let div=document.querySelector("div");
-div.addEventListener("mouseover" ,function(e){
-console.log("mouse entered")
-    div.style.background="lightgreen";
-    div.style.borderRadius="50%";
+let btn=document.getElementById("btn");
+let div=document.getElementsByClassName("div");
+let array=[
+    {
+        rollNo:1,
+        Name:"Soban",
+        Marks:50,
+        age:20,
+        class:"BSSE"
+    },
+    {
+         rollNo:2,
+        Name:"ALi",
+        Marks:40,
+        age:21,
+        class:"BSCS"
+    }
+]
 
-})
-div.addEventListener("mouseleave",function(e){
-    div.style.background="lightblue";
-    div.style.width="200px";
-    div.style.height="200px";
-    console.log("mouseleave");
+btn.addEventListener("click",function(e){
+
+    for(let item of array){
+        console.log(item);
+    }
+
 })
