@@ -1,5 +1,5 @@
 let btn=document.getElementById("btn");
-let div=document.getElementsByClassName("div");
+let div=document.getElementsByClassName("div")[0];
 let array=[
     {
         rollNo:1,
@@ -19,8 +19,18 @@ let array=[
 
 btn.addEventListener("click",function(e){
 
-    for(let item of array){
-        console.log(item);
-    }
+ let firstStudent=array[0];
+
+ for(let keys in firstStudent){
+    let para=document.createElement("p");
+    para.innerHTML=`${keys} : ${firstStudent[keys]} <br>`;
+    div.appendChild(para);
+ }
+
+
+
+
+
+
 
 })
