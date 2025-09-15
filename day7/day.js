@@ -1,14 +1,11 @@
-let color=document.getElementById("color");
-color.addEventListener("change",function(e){
-    document.body.classList.remove("pink","black","yellow","default")
-    
-    if(e.target.value==="pink"){
-        document.body.classList.add("pink");
-    }else if(e.target.value==="black"){
-        document.body.classList.add("black");
-    }else if(e.target.value==="yellow"){
-        document.body.classList.add("yellow");
-    }else if(e.target.value==="choose"){
-        document.body.classList.add("default");
+let input = document.getElementById("input");
+let ul=document.getElementById("ul");
+input.addEventListener("keydown",function(e){
+    if(e.key==="Enter"){
+   let createli=document.createElement("li");
+   createli.innerText=input.value;
+   ul.appendChild(createli);
+   input.value="";
+
     }
 })
