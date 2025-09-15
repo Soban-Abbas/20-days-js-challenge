@@ -1,0 +1,16 @@
+.pink{
+    background: pink;
+    color: white;
+}
+.black{
+    background: black;
+    color: white;
+}
+.yellow{
+    background: yellowgreen;
+    color: white;;
+}
+.default{
+    background: white;
+    color: black;
+}
