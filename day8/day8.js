@@ -1,15 +1,16 @@
 let btn=document.getElementById("btn");
-let array=[1,2,3,4,5,6];
-let div=document.getElementById("div");
-btn.addEventListener("click",function(e){
-    let newarray=array.map(function(a){
-return a*2;
-    })
+
+btn.addEventListener("click",click)
+function click(){
+
+  document.body.classList.add("theme");
+localStorage.setItem("pagetheme",JSON.stringify("theme"))
+
+}
 
 
-let makeString=newarray.toString(" <br> ");
-let span=document.createElement("span");
-span.innerText=makeString;
-div.appendChild(span);
-
-})
+let showpage=JSON.parse(localStorage.getItem("pagetheme"))
+console.log(showpage);
+if(showpage){
+  document.body.classList.add(showpage);
+}
