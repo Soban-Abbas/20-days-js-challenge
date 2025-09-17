@@ -1,19 +1,26 @@
-let timer=document.getElementById("timer");
-let value=Number(timer.innerText);
-console.log(value);
+let onlineBtn=document.getElementById("btn1");
+let offlineBtn=document.getElementById("btn2");
+let updateStatus=document.getElementById("status");
 
+onlineBtn.addEventListener("click",changestatus);
+offlineBtn.addEventListener("click",offlinestatus);
 
-let stopInterval=setInterval(function(){
+function changestatus(){
+    updateStatus.innerText="Online";
 
-timer.innerText=value;
-
-value--;
-if(value===-1){
-    clearInterval(stopInterval);
-    alert("Time Up")
+    localStorage.setItem("status","Online");
+    console.log(online);
 }
 
+function offlinestatus(){
+    updateStatus.innerText="Offline";
+    localStorage.setItem("status","Offline");
+    console.log(offline);
+}
 
-
-
-},1000)
+let updatescreen= 
+(localStorage.getItem("status"));
+console.log(updatescreen);
+if(updatescreen){
+    updateStatus.innerText=updatescreen;
+}
