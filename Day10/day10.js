@@ -1,35 +1,28 @@
-let name = document.getElementById("name");
-let email = document.getElementById("email");
-let password = document.getElementById("password");
-let loginForm = document.getElementById("loginform");
-loginForm.addEventListener("submit", function (a) {
-  a.preventDefault();
-  let span = document.getElementById("errors");
-  span.innerText = "";
-  if (name.value === "" || email.value === "" || password.value === "") {
-    span.style.color = "red";
-    span.innerText = "Enter correct information";
-  } else {
-    span.innerText = "";
-    alert("form submitted Successfully");
-
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("email", email.value);
-    localStorage.setItem("password", password.value);
+let theme = document.getElementById("Theme");
+theme.addEventListener("change", function (e) {
+  if (e.target.value === "Themes") {
+    document.body.classList.remove("dark");
+    document.body.classList.remove("light");
+    document.body.classList.add("light");
+  } else if (e.target.value === "dark") {
+    document.body.classList.remove("light");
+    document.body.classList.add("dark");
+    theme.value = "";
+    localStorage.setItem("theme", "dark");
+  } else if (e.target.value === "light") {
+    document.body.classList.remove("dark");
+    document.body.classList.add("light");
+    localStorage.setItem("theme", "light");
   }
 });
-window.addEventListener("load", function (e) {
-  let savename = localStorage.getItem("name");
-  let saveemail = localStorage.getItem("email");
-  let savepassword = localStorage.getItem("password");
-
-  if (savename !== null) {
-    name.value = savename;
-  }
-  if (saveemail !== null) {
-    email.value = saveemail;
-  }
-  if (savepassword !== null) {
-    password.value = savepassword;
+window.addEventListener("load", function (a) {
+  let applyTheme = localStorage.getItem("theme");
+  console.log(applyTheme);
+  if (applyTheme !== null && applyTheme === "dark") {
+    document.body.classList.add("dark");
+    theme.value = "Dark";
+  } else if (applyTheme !== null && applyTheme === "light") {
+    document.body.classList.add("light");
+    theme.value = "Light";
   }
 });
