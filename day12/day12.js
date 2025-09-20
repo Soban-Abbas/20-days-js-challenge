@@ -1,32 +1,19 @@
- const menu = {
-      Home: {},
-      Products: {
-        Electronics: { Phones: {}, Laptops: {} },
-        Clothing: { Men: {}, Women: {} }
-      },
-      Contact: {}
-    };
+function fact(n){
 
-    let items = document.getElementById("items");
-
-    function createMenu(menuObject) {
-      let ul = document.createElement("ul");
-
-      for (let key in menuObject) {
-        let li = document.createElement("li");
-        li.textContent = key;
-
-        // if this key has children → call recursion
-        if (Object.keys(menuObject[key]).length > 0) {
-          let childUl = createMenu(menuObject[key]);
-          li.appendChild(childUl);
-        }
-
-        ul.appendChild(li);
-      }
-
-      return ul;
+    if(n===1){
+        return 1;
     }
+    return n*fact(n-1);
 
-    // generate and attach menu
-    items.appendChild(createMenu(menu));
+
+}
+
+
+function logging(callback,n){
+    let starttime=performance.now();
+   let result= callback(n);
+    let endtime=performance.now();
+    console.log(result +"  " +"Time of executions"+ Number(endtime-starttime));
+}
+
+logging(fact,9);
