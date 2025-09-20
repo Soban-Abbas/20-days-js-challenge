@@ -6,20 +6,16 @@ let image=document.getElementById("img");
  let pbtn=document.getElementById("previous");
  let nbtn=document.getElementById("next");
  let index=0;
- pbtn.addEventListener("click",function(e){
-    if(index<0){
-        image.src=picture[picture.length-1];
-        index=(picture.length)-1;
-
-    }
-    else if(index===0){
-
-image.src=picture[index];
+ image.src=picture[index];
+ pbtn.addEventListener("click",function(){
+    
 
 index=index-1;
+if(index<0){
+    index=Number(picture.length)-1;
+}
+image.src=picture[index];
 
 
-    }else{
-        image.src=picture[index];
-    }
+    
  })
