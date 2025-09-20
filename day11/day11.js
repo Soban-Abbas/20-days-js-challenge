@@ -19,3 +19,26 @@ image.src=picture[index];
 
     
  })
+
+ nbtn.addEventListener("click",function(){
+    index=index+1;
+    if(index>Number(picture.length-1)){
+        index=0;
+    }
+
+    image.src=picture[index];
+ })
+
+
+
+let stop=setInterval(() => {
+ 
+    index=index+1;
+    if(index>Number(picture.length-1)){
+        index=0
+    }
+
+
+       image.src=picture[index];
+}, 3000);
+
