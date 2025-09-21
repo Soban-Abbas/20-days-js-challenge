@@ -1,20 +1,14 @@
-class user{
-    constructor(name,age){
-this._name=name;
-this._age=age;
-}
+class mathutils{
 
-get name(){
-    return `${this._name.toUpperCase()}`
-}
+    static pi=3.14;
+    static add(a,b){
+         return a+b;
+        }
 
 
-set name (newname){
-    this._name=newname;
-}
+
 }
 
-let user1=new user("soban",19);
-console.log(user1.name);
-user1.name="ali";
-console.log(user1.name);
+
+console.log(mathutils.pi);
+console.log(mathutils.add(4,5));
