@@ -1,3 +1,4 @@
+
 let locationInput=document.getElementById("location");
 let searchBtn=document.getElementById("searchbtn");
 searchBtn.disabled=true;
@@ -19,8 +20,7 @@ searchBtn.addEventListener("click",  function(e){
 
     async function weatherapi() {
         let result=await fetch(key)
-        let data= await
-         result.json();
+        let data= await result.json();
 
         
 let show=document.getElementById("div");
