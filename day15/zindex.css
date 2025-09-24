@@ -1,0 +1,22 @@
+.box1{
+    top: 1rem;
+    left: 1rem;
+    background: red;
+    height: 6rem;
+    width: 6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.box2{
+    position: absolute;
+    z-index: 2;
+    background: yellow;
+    height: 6rem;
+    width: 6rem;
+    top: 2rem;
+    left: 2rem;
+    overflow: hidden;
+    overflow: auto;
+
+}

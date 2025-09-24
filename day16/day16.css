@@ -1,0 +1,66 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.box{
+
+    background: yellow;
+   
+    width: 50dvw;
+    height: 50dvh;
+    position: fixed;
+    z-index: 3;
+    left: 10px;
+
+    
+
+
+
+}
+
+.box1{
+    top: 1rem;
+    left: 1rem;
+    background: red;
+    height: 50dvh;
+    width: 50dvh;
+    position: relative;
+    z-index: 2;
+}
+.box2{
+    background: yellow;
+    position: absolute;
+    height: 50%;
+    width: 50%;
+
+    right: 1rem;
+    top: 1rem;
+    
+
+    
+}
+
+.box3{
+
+    position: relative;
+    background: pink;
+    height: 300px;
+    width: 300px;
+    top: 10rem;
+    left: 2rem;
+}
+
+.box4{
+    position: absolute;
+    background: teal;
+    height: 300px;
+    width: 300px;
+    z-index: 1;
+    top: 10rem;
+    left: 2rem;
+bottom: 0;
+right: 0;
+
+
+}
