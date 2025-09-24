@@ -64,3 +64,17 @@ right: 0;
 
 
 }
+
+
+.box5{
+    margin-top: auto;
+    top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+left: 1rem;
+
+
+
+
+}
